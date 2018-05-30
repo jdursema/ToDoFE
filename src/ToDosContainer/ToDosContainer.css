@@ -1,0 +1,20 @@
+.section-title{
+  display: flex;
+  align-items: center;
+}
+
+hr{
+  width: 95%;
+  color: #D1D2D3;
+}
+
+h3{
+  text-transform: uppercase;
+  margin: 2% 1%;
+  font-weight: 300;
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-between;
+}

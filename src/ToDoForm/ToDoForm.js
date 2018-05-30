@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql, compose } from 'react-apollo';
+import './ToDoForm.css';
 
 const getProjectsQuery = gql`
   {
@@ -58,13 +59,13 @@ class ToDoForm extends Component {
 
   render(){
     return (
-      <form>
+      <form className='add-task-form'>
         <select name="project" onChange={this.changeProjectInput}>
           <option value=''>Select A Project</option>
           { this.mapProjectOptions() }
         </select>
-        <input type='text' placeholder='Task' onChange={this.changeTaskInput}/>
-        <button onClick={this.submitToDo}>Add Task</button>
+        <input type='text' placeholder='Task' className='task-input' onChange={this.changeTaskInput}/>
+        <button className='submit-btn' onClick={this.submitToDo}>Add Task</button>
       </form>
     )
   }
