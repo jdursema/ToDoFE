@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className="App">
-          <h1>ToDo Box</h1>
+          <h1 className='title'><span>ToDo</span> List</h1>
           <ToDoForm addToDo={this.addToDo}/>
           <ToDosContainer ToDos={this.state.ToDos}/>
         </div>
