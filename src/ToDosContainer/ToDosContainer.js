@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import './ToDosContainer.css';
 
 const getTasksQuery = gql`
   {
@@ -25,7 +26,16 @@ const ToDosContainer = (props) => {
   }
   
   return(
-    <div>{mappedToDos}</div>
+    <div>
+      <div className='section-title'>
+        <h3>Projects</h3>
+        <hr/>
+      </div>
+      <div className='card-container'>
+        {mappedToDos}
+      </div>
+      
+    </div>
   )
 }
 
